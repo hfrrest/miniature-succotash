@@ -1,21 +1,61 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Let's Eat!</title>
-      <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-    <div class="container">
-      <h1>Let's Eat!</h1>
-      <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search for delicious recipes...">
-        <button id="searchButton">View Recipes</button>
-      </div>
-      <div class="loading"></div>
-      <div id="results"></div>
-    </div>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Eat!</title>
+    <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    </body>
+    <script src="https://kit.fontawesome.com/eccaf60828.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="background__overlay"></div>
+    <img class="background__image" src="./assets/food.jpg" alt="Food">
+    <section id="landing">
+      <nav>
+        <div class="nav__container">
+          <img class="logo" src="./assets/logo.svg" alt="">
+          <ul class="nav__links">
+            <li><a href="#" class="nav__link">Home</a></li>
+            <li><a href="#" class="nav__link">Recipes</a></li>
+            <li><a href="#" class="nav__link">Contact</a></li>
+          </ul>
+          <button class="btn__menu" onclick="openMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="menu__backdrop">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+              <i class="fas fa-times"></i>
+            </button>
+            <ul class="menu__links">
+              <li class="menu__list">
+                <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
+              </li>
+              <li class="menu__list">
+                <a href="#" class="menu__link" onclick="closeMenu()">Recipes</a>
+              </li>
+              <li class="menu__list">
+                <a class="menu__link no-cursor" onclick="closeMenu()">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <header>
+        <div class="container">
+          <div class="header__description">
+            <h1>Recipes R Us!</h1>
+            <h2> Where Delicious Begins.</h2>
+            <div class="search-container">
+              <input type="text" id="searchInput" placeholder="Find delicious recipes...">
+              <button id="searchButton">View Recipes</button>
+            </div>
+            <div class="loading"></div>
+            <div id="results"></div>
+          </div>
+        </div>
+      </header>
+    </section>
+    <script src="script.js"></script>
+  </body>
 </html>
